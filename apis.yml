@@ -1,23 +1,76 @@
 aid: azafaros
+
 name: Azafaros
-description: 'Azafaros is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.azafaros.com/userdata/instellingen/logo_azafaros-1x38.png
+
+description: Azafaros B.V. develops therapeutic candidates for severe rare metabolic disorders. Its lead program is the orally available azasugar
+  nizubaglustat, designed to treat central nervous system involvement and modulate glycosphingolipid metabolism in lysosomal storage diseases.
+  The company focuses on patients with conditions such as GM1/GM2 gangliosidoses.
+
 url: https://raw.githubusercontent.com/api-evangelist/azafaros/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Lysosomal Storage Disorders
+- Rare Metabolic Disorders
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: security/azafaros-vulnerability-disclosure.yml
+- type: SecurityTxt
+  url: well-known/azafaros-security.txt
+- type: WellKnown
+  url: well-known/azafaros-well-known.yml
+- type: Hosts
+  url: hosts/azafaros-hosts.yml
+- type: PrivacyPolicy
+  url: https://www.azafaros.com/privacy-policy
+- type: Newsroom
+  url: https://www.azafaros.com/news-media/news
+- type: VulnerabilityDisclosure
+  url: security/azafaros-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/azafaros-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/azafaros
+  url: https://www.azafaros.com
+
+apis:
+- name: Azafaros API
+  description: Azafaros does not appear to expose a public API; no documentation or OpenAPI spec was found.
+  humanURL: https://www.azafaros.com
+  baseURL: null
+  aid: azafaros:azafaros-api
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No API documentation or OpenAPI spec was found on the provider's domain.
+  evidence:
+  - url: https://api.azafaros.com/openapi.json
+    status: 404
+  checked: 2026-09-27
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
